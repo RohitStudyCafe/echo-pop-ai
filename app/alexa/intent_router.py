@@ -96,8 +96,11 @@ class AlexaIntentRouter:
             )
             return build_ask_response(text=help_text, reprompt_text="What would you like to ask?", session_attributes=session_attrs)
         elif intent_name == "AMAZON.FallbackIntent":
-            fallback_text = "I didn't quite catch that. What would you like to ask?"
-            return build_ask_response(text=fallback_text, reprompt_text="You can ask me anything.", session_attributes=session_attrs)
+            # If Fallback captured any slot values, route directly to AI
+            if slots and any(s.get("value") for s in slots.values() if isinstance(s, dict)):
+                return await self._handle_ask_ai(slots, session_attrs, user_id, session_id, tracker)
+            fallback_text = "I didn't quite catch that. Try asking: 'Tell me', 'Explain', or 'What is', followed by your question."
+            return build_ask_response(text=fallback_text, reprompt_text="What would you like to ask?", session_attributes=session_attrs)
         else:
             return build_ask_response(f"I received {intent_name}, but I'm not sure how to handle it yet. What's on your mind?")
 
