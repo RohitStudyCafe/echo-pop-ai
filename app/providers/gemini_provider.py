@@ -42,7 +42,7 @@ class GeminiProvider(BaseAIProvider):
             "contents": contents,
             "generationConfig": {
                 "temperature": 0.7,
-                "maxOutputTokens": 250
+                "maxOutputTokens": 450
             }
         }
 
