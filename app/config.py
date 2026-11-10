@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     
     # Google Gemini Settings
     GEMINI_API_KEY: str = ""
-    GEMINI_MODEL: str = "gemini-2.0-flash"
+    GEMINI_MODEL: str = "gemini-3.5-flash-lite"
     
     # Latency and Turn-based Voice Optimization
     REQUEST_TIMEOUT_SECONDS: float = 7.0  # Echo Pop voice requests should finish under 8s
