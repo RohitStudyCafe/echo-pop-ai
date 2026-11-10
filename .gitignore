@@ -1,0 +1,25 @@
+# Secrets & local env
+.env
+*.env.local
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Build artifacts & packages
+build_lambda/
+lambda_deployment_package.zip
+dist/
+build/
+*.egg-info/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

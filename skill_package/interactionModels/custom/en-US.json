@@ -1,0 +1,127 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "cloud assistant",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "stop",
+            "exit",
+            "quit",
+            "bye",
+            "goodbye"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "help",
+            "what can you do",
+            "how do I use this"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AskAIIntent",
+          "slots": [
+            {
+              "name": "Query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "ask {Query}",
+            "tell me {Query}",
+            "explain {Query}",
+            "what is {Query}",
+            "why is {Query}",
+            "how do I {Query}",
+            "how does {Query} work",
+            "who is {Query}",
+            "{Query}"
+          ]
+        },
+        {
+          "name": "SwitchProviderIntent",
+          "slots": [
+            {
+              "name": "Provider",
+              "type": "AI_PROVIDER_TYPE"
+            }
+          ],
+          "samples": [
+            "switch to {Provider}",
+            "use {Provider}",
+            "change model to {Provider}",
+            "switch provider to {Provider}",
+            "change to {Provider}"
+          ]
+        },
+        {
+          "name": "ClearMemoryIntent",
+          "slots": [],
+          "samples": [
+            "clear memory",
+            "forget our conversation",
+            "reset memory",
+            "clear conversation history",
+            "delete memory",
+            "forget everything"
+          ]
+        },
+        {
+          "name": "GetStatusIntent",
+          "slots": [],
+          "samples": [
+            "status",
+            "what model are you using",
+            "who is powering you",
+            "which provider is active",
+            "system status"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "AI_PROVIDER_TYPE",
+          "values": [
+            {
+              "name": {
+                "value": "gemini",
+                "synonyms": [
+                  "Google Gemini",
+                  "Google",
+                  "Gemini flash"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "openai",
+                "synonyms": [
+                  "OpenAI",
+                  "ChatGPT",
+                  "GPT",
+                  "GPT 4"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+

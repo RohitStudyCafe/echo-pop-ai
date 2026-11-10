@@ -1,0 +1,46 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "name": "Cloud AI Assistant",
+          "summary": "Connect your Echo Pop to OpenAI and Google Gemini.",
+          "description": "Fast turn-based voice AI assistant for Amazon Echo Pop powered by OpenAI and Google Gemini models with conversational memory and dynamic model switching.",
+          "examplePhrases": [
+            "Alexa, open cloud assistant",
+            "Alexa, ask cloud assistant what causes the northern lights",
+            "Alexa, ask cloud assistant to switch to Gemini"
+          ],
+          "keywords": [
+            "ai",
+            "openai",
+            "gemini",
+            "assistant",
+            "voice"
+          ]
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Provide custom HTTPS endpoint to your cloud VPS backend.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "https://your-domain.com/api/v1/alexa"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "usesPersonalInfo": false,
+      "isChildDirected": false,
+      "isExportCompliant": true,
+      "containsAds": false
+    }
+  }
+}
+
