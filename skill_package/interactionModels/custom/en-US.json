@@ -50,7 +50,10 @@
             "how do I {Query}",
             "how does {Query} work",
             "who is {Query}",
-            "{Query}"
+            "search for {Query}",
+            "I want to know {Query}",
+            "look up {Query}",
+            "answer {Query}"
           ]
         },
         {
