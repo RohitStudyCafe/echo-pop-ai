@@ -46,7 +46,12 @@ class GeminiProvider(BaseAIProvider):
             }
         }
 
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{self.model}:generateContent?key={self.api_key}"
+        # Auto-map deprecated or legacy models to active fast model
+        active_model = self.model
+        if active_model in ("gemini-2.0-flash", "gemini-1.5-flash", "gemini-2.5-flash", "gemini-2.0-flash-exp", ""):
+            active_model = "gemini-3.5-flash-lite"
+
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{active_model}:generateContent?key={self.api_key}"
 
         t0 = time.perf_counter()
         async with httpx.AsyncClient(timeout=timeout) as client:

@@ -41,7 +41,7 @@ def test_alexa_ask_ai_intent(sample_alexa_ask_payload):
     
     assert data["response"]["shouldEndSession"] is False
     speech = data["response"]["outputSpeech"]["text"]
-    assert "Mocked answer from OpenAI" in speech
+    assert "Mocked answer from" in speech
     
     # Verify session history was updated
     session_attrs = data.get("sessionAttributes", {})

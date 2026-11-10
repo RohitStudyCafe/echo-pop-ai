@@ -54,6 +54,7 @@ async def health():
         "persistence_enabled": settings.PERSISTENCE_ENABLED
     }
 
+@app.post("/")
 @app.post("/api/v1/alexa")
 async def alexa_webhook(request: Request):
     tracker = LatencyTracker()
